@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import gamesReducer from '../features/games/gamesSlice';
 
 export const store = configureStore({
-	reducer: {},
+	reducer: {
+		games: gamesReducer,
+	},
 });
 
 export type AppDispatch = typeof store.dispatch;

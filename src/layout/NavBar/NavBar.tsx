@@ -7,6 +7,9 @@ export default function NavBar(): JSX.Element {
 			<NavLink className={styles.link} to="/">
 				Home
 			</NavLink>
+			<NavLink className={styles.link} to="games">
+				Games
+			</NavLink>
 		</nav>
 	);
 }

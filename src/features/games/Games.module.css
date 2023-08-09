@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+.gamesBoxStyle {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.gameCardStyle {
+  max-width: 250px;
+  height: 350px;
+  border-radius: 5px;
+  color: white;
+  background-color: #575757;
+}
+
+.imgStyle {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-width: 250px;
+}
+
+.textBoxStyle {
+  font-family: 'Amaranth', sans-serif;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titleStyle {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.descriptionStyle {
+  font-style: italic;
+  font-size: 14px;
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
