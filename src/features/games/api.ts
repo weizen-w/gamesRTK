@@ -3,7 +3,7 @@ import Game from './types/Game';
 const optionsToFetch = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '2951447375mshc3667a3e605f1cep197f45jsn4df8cf7365d1',
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
     'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
   }
 };

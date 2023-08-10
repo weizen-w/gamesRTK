@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
 
+.logoStyle {
+  position: relative;
+  left: 10px;
+  bottom: -7px;
+  height: 55px;
+  margin-right: 30px;
+  box-shadow: 0 0 10px 6px rgb(22, 22, 22);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 .container {
   font-family: 'Big Shoulders Stencil Text', cursive;
   font-size: 30px;
   background-color: #575757;
   height: 50px;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .link {

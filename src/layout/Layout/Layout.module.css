@@ -1,3 +1,16 @@
+.headerStyle {
+	position: relative;
+	z-index: 998;
+	height: 100px;
+	width: 100%;
+}
+
+.imgStyle {
+	object-fit: cover;
+	width: 100%;
+	max-height: 100px;
+}
+
 .footerStyle {
 	margin-top: '60px';
 	background-color: 'grey';

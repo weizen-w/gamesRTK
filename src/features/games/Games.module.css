@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
 
+.gamesPageStyle {
+  margin-left: 270px;
+  padding: 0px 10px;
+}
+
 .gamesBoxStyle {
   padding: 30px;
   display: flex;
@@ -43,4 +48,30 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.leftBarStyle {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  overflow-x: hidden;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.leftBarStyle:hover {
+  color: #f1f1f1;
+}
+
+.logoStyle {
+  position: relative;
+  top: -80px;
+  width: 240px;
+  box-shadow: 0 0 10px 6px rgb(70, 70, 70);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
