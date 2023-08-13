@@ -1,27 +1,38 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import GamesState from './types/GamesState';
 import * as api from './api';
+import Params from './types/Params';
 
-const initialState: GamesState = {
-  games: [],
+const initialStateParams: Params = {
+	platform: 'all',
+	sortBy: 'relevance',
+	tags: '',
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export const loadGames = createAsyncThunk(
-  'games/loadGames',
-  () => api.getAll()
+export const initialState: GamesState = {
+	games: [],
+	params: initialStateParams,
+};
+
+export const loadGamesByParams = createAsyncThunk(
+	'games/loadGamesByParams',
+	(path: string) => api.getAllByParams(path)
 );
 
 const gamesSlice = createSlice({
-  name: 'games',
-  initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(loadGames.fulfilled, (state, action) => {
-        state.games = action.payload;
-      });
-  },
+	name: 'games',
+	initialState,
+	reducers: {
+		changeParams: (state, action: PayloadAction<Params>) => {
+			state.params = action.payload;
+		},
+	},
+	extraReducers: (builder) => {
+		builder.addCase(loadGamesByParams.fulfilled, (state, action) => {
+			state.games = action.payload;
+		});
+	},
 });
 
 export default gamesSlice.reducer;
+export const { changeParams } = gamesSlice.actions;

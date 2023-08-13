@@ -79,7 +79,7 @@
 		"prettier/prettier": [
 			"error",
 			{
-				"printWidth": 80,
+				"printWidth": 100,
 				"endOfLine": "lf",
 				"singleQuote": true,
 				"tabWidth": 2,
