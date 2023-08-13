@@ -14,6 +14,7 @@ export default function LeftBar(): JSX.Element {
 	const [sortStyleState, setSortStyleState] = useState<string>(styles.filterSortStyle);
 	const [platformStyleState, setPlatformStyleState] = useState<string>(styles.filterSortStyle);
 	const [categoryStyleState, setCategoryStyleState] = useState<string>(styles.filterSortStyle);
+	const inputsArray = document.getElementsByTagName('input');
 	const dispatch = useAppDispatch();
 
 	function clearParams(): void {
@@ -22,12 +23,11 @@ export default function LeftBar(): JSX.Element {
 		setTags(initialState.params.tags);
 		tagsSet.clear();
 		setTagsSet(new Set(tagsSet));
-		const checkBoxs = document.getElementsByTagName('input');
-		for (var i = 0; i < checkBoxs.length; i++) {
-			if (!checkBoxs[i].defaultChecked) {
-				checkBoxs[i].checked = false;
+		for (var i = 0; i < inputsArray.length; i++) {
+			if (inputsArray[i].defaultChecked) {
+				inputsArray[i].checked = true;
 			} else {
-				checkBoxs[i].checked = true;
+				inputsArray[i].checked = false;
 			}
 		}
 	}
@@ -61,6 +61,20 @@ export default function LeftBar(): JSX.Element {
 			? setCategoryStyleState(styles.filterSortStyle)
 			: setCategoryStyleState(styles.filterSortStyleActive);
 	}
+	function checkChecked(): void {
+		const tempArrayTags = tags.split('.');
+		for (var i = 0; i < tempArrayTags.length; i++) {
+			tagsSet.add(tempArrayTags[i]);
+		};
+		for (var i = 0; i < inputsArray.length; i++) {
+			if (inputsArray[i].value === params.sortBy || inputsArray[i].value === params.platform || tagsSet.has(inputsArray[i].value)) {
+				inputsArray[i].checked = true;
+			} else {
+				inputsArray[i].checked = false;
+			}
+		}
+	}
+	checkChecked();
 	useEffect(() => {
 		dispatch(
 			changeParams({

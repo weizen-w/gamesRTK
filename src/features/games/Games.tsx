@@ -4,6 +4,7 @@ import { selectGamesByOptions, selectParams } from './selectors';
 import { loadGamesByParams } from './gamesSlice';
 import styles from './Games.module.css';
 import LeftBar from './LeftBar';
+import { Link } from 'react-router-dom';
 
 export default function Games(): JSX.Element {
 	const games = useAppSelector(selectGamesByOptions);
@@ -23,13 +24,15 @@ export default function Games(): JSX.Element {
 			<div className={styles.gamesBoxStyle}>
 				{games instanceof Array ? (
 					games.map((game) => (
-						<div key={game.id} className={styles.gameCardStyle}>
-							<img className={styles.imgStyle} src={game.thumbnail} alt={game.title} />
-							<div className={styles.textBoxStyle}>
-								<p className={styles.titleStyle}>{game.title}</p>
-								<p className={styles.descriptionStyle}>{game.short_description}</p>
+						<Link key={game.id} style={{ textDecoration: 'none' }} to={`./${game.id}`}>
+							<div  className={styles.gameCardStyle}>
+								<img className={styles.imgStyle} src={game.thumbnail} alt={game.title} />
+								<div className={styles.textBoxStyle}>
+									<p className={styles.titleStyle}>{game.title}</p>
+									<p className={styles.descriptionStyle}>{game.short_description}</p>
+								</div>
 							</div>
-						</div>
+						</Link>
 					))
 				) : (
 					<p>
