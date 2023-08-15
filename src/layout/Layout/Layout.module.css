@@ -12,7 +12,9 @@
 }
 
 .footerStyle {
-	margin-top: '60px';
-	background-color: 'grey';
-	height: '70px';
+	margin-top: 50px;
+	position: relative;
+	height: 70px;
+	z-index: 99998;
+	background-color: #757575;
 }

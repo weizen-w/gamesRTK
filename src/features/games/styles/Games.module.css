@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
+
+.gamesPageStyle {
+	margin-left: 270px;
+	padding: 0px 10px;
+}
+
+.gamesBoxStyle {
+	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.gameCardStyle {
+	max-width: 250px;
+	height: 350px;
+	border-radius: 5px;
+	color: white;
+	background-color: #747474;
+}
+
+.gameCardStyle:hover {
+	opacity: .8;
+}
+
+.imgStyle {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	max-width: 250px;
+}
+
+.textBoxStyle {
+	font-family: 'Amaranth', sans-serif;
+	padding: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.titleStyle {
+	max-height: 21px;
+	font-weight: 700;
+	font-size: 17px;
+	margin-top: 0;
+	flex-wrap: nowrap;
+}
+
+.descriptionStyle {
+	font-style: italic;
+	font-size: 14px;
+	height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+
+.genrePlatformBox {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	bottom: -20px;
+	font-size: 10px;
+	background-color: #474747;
+}
+
+.platform {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.noResultImg {
+	border-radius: 10px;
+	max-height: 500px;
+	opacity: 0.7;
+}

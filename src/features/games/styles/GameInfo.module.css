@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+.page {
+	min-height: 1000px;
+	display: flex;
+	gap: 20px;
+	margin-top: 20px;
+	font-family: 'Amaranth', sans-serif;
+}
+
+.btnBack {
+	margin: 0;
+	min-width: 100px;
+  min-height: 100%;
+  text-decoration: none;
+	background-color: #575757;
+}
+
+.btnLinkBack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 100px;
+  color: white;
+}
+
+.btnBack:hover {
+	background-color: #757575;
+}
+
+/* Left box */
+.leftBox {
+	position: sticky;
+	top: 90px;
+	left: 120px;
+	max-width: 360px;
+  height: max-content;
+}
+
+.img {
+	max-width: 100%;
+	border-radius: 3px;
+}
+
+.platform_genre_box {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.genre {
+	height: 20px;
+	border: 1px solid black;
+	padding: 5px;
+	box-shadow: 0 0 10px;
+	background-color: #575757;
+}
+
+.platform {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+	border: 1px solid black;
+	padding: 5px;
+	box-shadow: 0 0 10px;
+	background-color: #575757;
+}
+
+.infoBox {
+	color: rgb(222, 222, 222);
+}
+
+.infoTitle {
+	border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.infoText {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	gap: 10px;
+	text-align: end;
+}
+
+.officialPageLink {
+  max-width: 210px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: rgb(0, 143, 220);
+}
+
+.officialPageLink:hover {
+	text-decoration: underline;
+}
+
+.requirementsBox {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #75757547;
+	color: rgb(222, 222, 222);
+}
+
+.requirementsTitle {
+	margin: 0;
+	margin-bottom: 10px;
+	color: black;
+}
+
+.requirementsText {
+	margin: 0;
+	padding: 10px;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: end;
+	gap: 10px;
+}
+
+/* Rigth box */
+.rigthBox {
+	padding: 10px;
+	max-width: 70%;
+	background-color: #757575;
+}
+
+.title {
+	text-transform: uppercase;
+}
+
+.freetogameLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 180px;
+	border: 10px outset rgb(61, 61, 61);
+	color: #ababab;
+	background-color: #333333;
+	text-decoration: none;
+}
+
+.freetogameLink:hover {
+	background-color: #636363;
+}
+
+.description {
+	padding: 10px;
+	text-align: justify;
+	font-size: 18px;
+}
+
+.screenshotsBox {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333333;
+  min-width: 98%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	max-height: min-content;
+	padding: 10px;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.screenshot {
+	margin: 5px;
+	height: 200px;
+	max-width: 300px;
+	border: 10px solid black;
+}
+
+.screenshotActive {
+	position: fixed;
+	z-index: 99999;
+	top: 40px;
+	left: 80px;
+	box-shadow: 0 0 100px 1000px black;
+}

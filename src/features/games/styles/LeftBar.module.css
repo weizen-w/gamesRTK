@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
+
+.leftBarStyle {
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	color: white;
+	background-color: #121212;
+	overflow-x: hidden;
+	padding: 20px;
+	padding-top: 100px;
+	font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+.logoStyle {
+	position: relative;
+	top: -80px;
+	width: 240px;
+	box-shadow: 0 0 10px 6px rgb(70, 70, 70);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.textBoxLeftBox {
+	position: relative;
+	top: -60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btnClearStyle {
+	justify-content: center;
+	width: 150px;
+	margin: 1px;
+	padding: 6px;
+	font-size: 16px;
+	color: white;
+	border: 1px solid black;
+	background: #575757;
+	font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+.btnClearStyle:hover {
+	opacity: .8;
+}
+
+.titleParamsStyle {
+	width: 100%;
+	margin: 1px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid black;
+	background: #575757;
+}
+
+.titleParamsStyle:hover {
+	opacity: .8;
+}
+
+.filterSortStyle {
+	position: relative;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+	overflow: auto;
+	text-overflow: clip;
+}
+
+.filterSortStyleActive {
+	position: relative;
+	max-height: 200px;
+	overflow: auto;
+	text-overflow: clip;
+}
+
+.sortBox {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.platformBox {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.categoryBox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.categoryLabel {
+	width: 100px;
+}
+
+.inputHover:hover {
+	opacity: 0.8;
+}
