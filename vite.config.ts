@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		open: true,
 	},
-	// base: '/nameRepo/', //TODO
+	base: '/gamesRTK/',
 	build: {
 		outDir: 'build',
 		sourcemap: true,
