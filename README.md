@@ -5,10 +5,10 @@
 
 <p align="center">
 
-<img width="500" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/home.png" alt="home">
-<img width="500" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/games.png" alt="games">
-<img width="500" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/singIn.png" alt="auth">
-<img width="500" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/profil.png" alt="profil">
+<img width="300" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/home.png" alt="home">
+<img width="300" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/games.png" alt="games">
+<img width="300" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/singIn.png" alt="auth">
+<img width="300" src="https://github.com/weizen-w/gamesRTK/blob/8b086a2a1820c319f0082f04c523544a9488e400/example-image/profil.png" alt="profil">
 
 On the site using React Toolkit, JS, TS, HTML, CSS, API.
 
