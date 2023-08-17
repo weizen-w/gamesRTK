@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import styles from '../styles/Profil.module.css';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { selectAuth, selectUser } from '../selectors';
 import { edit, initialStateUser, loadUser } from '../usersSlice';
@@ -73,11 +73,12 @@ export default function Profil(): JSX.Element {
 			}
 		}
 	}
+
 	useEffect(() => {
 		dispatch(loadUser(auth.id));
 		setNewUser(user);
-		console.log(newUser);
 	}, [auth]);
+
 	return (
 		<div className={styles.pageStyle}>
 			<div className={styles.leftBar}>

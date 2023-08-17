@@ -6,12 +6,10 @@ export async function getAllUsers(): Promise<UsersObject> {
 	const res = await fetch('https://dummyjson.com/users');
 	return res.json();
 }
-
 export async function getUser(id: number): Promise<User> {
 	const res = await fetch(`https://dummyjson.com/users/${id}`);
 	return res.json();
 }
-
 export async function getAuth(username: string, password: string): Promise<Auth> {
 	const res = await fetch('https://dummyjson.com/auth/login', {
 		method: 'POST',

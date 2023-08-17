@@ -1,6 +1,6 @@
+import styles from '../styles/Auth.module.css';
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
-import styles from '../styles/Auth.module.css';
 import { loadAuth } from '../usersSlice';
 import { selectAuth } from '../selectors';
 
@@ -24,6 +24,7 @@ export default function Auth(): JSX.Element {
 				: (loginForm.className = styles.loginForm);
 		}
 	}
+
 	return (
 		<div className={styles.loginPage}>
 			<div className={styles.form}>

@@ -6,4 +6,5 @@ export default interface GamesState {
 	games: Game[];
 	params: Params;
 	game: GameInfo;
+	favorite: Game[];
 }

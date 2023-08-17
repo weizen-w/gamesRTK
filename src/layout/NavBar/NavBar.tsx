@@ -1,10 +1,11 @@
-import { Link, NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
+import { Link, NavLink } from 'react-router-dom';
 import { useAppSelector } from '../../app/hooks';
 import { selectAuth } from '../../features/users/selectors';
 
 export default function NavBar(): JSX.Element {
 	const auth = useAppSelector(selectAuth);
+
 	return (
 		<nav className={styles.container}>
 			<div className={styles.leftBox}>
@@ -21,14 +22,16 @@ export default function NavBar(): JSX.Element {
 			<div className={styles.rightBox}>
 				{auth?.username ? (
 					<>
-						<NavLink className={styles.link} to="users">
+						{/* <NavLink className={styles.link} to="users">
 							Users
-						</NavLink>
+						</NavLink> */}
 						<NavLink className={styles.link} to="profil">
 							Profil
 						</NavLink>
 					</>
-				) : ''}
+				) : (
+					''
+				)}
 				<NavLink className={styles.link} to="auth">
 					Sign In
 				</NavLink>

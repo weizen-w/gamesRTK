@@ -46,7 +46,7 @@
 }
 
 .btnClearStyle:hover {
-	opacity: .8;
+	opacity: 0.8;
 }
 
 .titleParamsStyle {
@@ -61,7 +61,7 @@
 }
 
 .titleParamsStyle:hover {
-	opacity: .8;
+	opacity: 0.8;
 }
 
 .filterSortStyle {

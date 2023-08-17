@@ -10,6 +10,7 @@ export default function Users(): JSX.Element {
 	useEffect(() => {
 		dispatch(loadUsers());
 	}, []);
+
 	return (
 		<div>
 			{users.users.map((user) => (

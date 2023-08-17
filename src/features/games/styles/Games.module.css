@@ -3,6 +3,7 @@
 .gamesPageStyle {
 	margin-left: 270px;
 	padding: 0px 10px;
+	min-height: calc(100vh - 240px);
 }
 
 .gamesBoxStyle {
@@ -16,13 +17,26 @@
 .gameCardStyle {
 	max-width: 250px;
 	height: 350px;
-	border-radius: 5px;
+	border-radius: 10px;
 	color: white;
 	background-color: #747474;
+	box-shadow: 0 0 5px black;
+}
+
+.favoriteIcon {
+	position: absolute;
+	z-index: 999999;
+	color: rgb(26, 26, 26);
+	background-color: #747474;
+	border-top-left-radius: 5px;
+}
+
+.favoriteIcon:hover {
+	background-color: #b56408;
 }
 
 .gameCardStyle:hover {
-	opacity: .8;
+	opacity: 0.8;
 }
 
 .imgStyle {

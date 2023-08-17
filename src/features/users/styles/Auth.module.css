@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
 
 .loginPage {
+	min-height: calc(100vh - 395px);
 	width: 360px;
 	padding: 8% 0 0;
 	margin: auto;
@@ -107,4 +108,3 @@ a {
 	font-weight: bold;
 	color: #8b0000bb;
 }
-

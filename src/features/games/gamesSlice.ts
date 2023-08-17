@@ -1,8 +1,9 @@
+import * as api from './api';
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import GamesState from './types/GamesState';
-import * as api from './api';
 import Params from './types/Params';
 import GameInfo from './types/GameInfo';
+import Game from './types/Game';
 
 const initialStateGameInfo: GameInfo = {
 	id: 0,
@@ -41,6 +42,7 @@ export const initialState: GamesState = {
 	games: [],
 	params: initialStateParams,
 	game: initialStateGameInfo,
+	favorite: [],
 };
 
 export const loadGamesByParams = createAsyncThunk('games/loadGamesByParams', (path: string) =>
@@ -57,6 +59,9 @@ const gamesSlice = createSlice({
 		changeParams: (state, action: PayloadAction<Params>) => {
 			state.params = action.payload;
 		},
+		addFavorite: (state, action: PayloadAction<Game>) => {
+			state.favorite = [...state.favorite, action.payload];
+		},
 	},
 	extraReducers: (builder) => {
 		builder
@@ -70,4 +75,4 @@ const gamesSlice = createSlice({
 });
 
 export default gamesSlice.reducer;
-export const { changeParams } = gamesSlice.actions;
+export const { changeParams, addFavorite } = gamesSlice.actions;

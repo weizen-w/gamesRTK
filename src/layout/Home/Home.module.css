@@ -1,6 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
+
 .container {
-  height: 100vh;
-  padding: 20px;
-  text-align: center;
-  font-size: 40px;
+	min-height: calc(100vh - 280px);
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+	display: flex;
+	font-family: 'Amaranth', sans-serif;
+}
+
+/* leftBox */
+.leftBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.welcomeBox {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+.imageBox {
+	max-width: 100%;
+	margin: 10px auto 10px auto;
+}
+
+/* rightBox */
+.rightBox {
+	margin: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #474747;
+}
+
+.recentlyBox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+.gameCardStyle {
+	max-width: 250px;
+	height: 350px;
+	border-radius: 5px;
+	color: white;
+	box-shadow: 0 0 10px black;
+	background-color: #747474;
+}
+
+.favoriteIcon {
+	position: absolute;
+	z-index: 999999;
+}
+
+.gameCardStyle:hover {
+	opacity: 0.8;
+}
+
+.imgStyle {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	max-width: 250px;
+}
+
+.textBoxStyle {
+	font-family: 'Amaranth', sans-serif;
+	padding: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.titleStyle {
+	max-height: 21px;
+	font-weight: 700;
+	font-size: 17px;
+	margin-top: 0;
+	flex-wrap: nowrap;
+}
+
+.descriptionStyle {
+	font-style: italic;
+	font-size: 14px;
+	height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+
+.genrePlatformBox {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	bottom: -20px;
+	font-size: 10px;
+	background-color: #474747;
+}
+
+.platform {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btnMore {
+	padding: 10px;
+	width: 100%;
+	color: rgb(192, 192, 192);
+	text-decoration: none;
+	border: 1px solid;
+}
+
+.btnMore:hover {
+	background-color: rgba(255, 255, 255, 0.167);
 }

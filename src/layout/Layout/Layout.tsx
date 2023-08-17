@@ -1,6 +1,6 @@
+import styles from './Layout.module.css';
 import { Outlet } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
-import styles from './Layout.module.css';
 
 export default function Layout(): JSX.Element {
 	return (
@@ -11,7 +11,24 @@ export default function Layout(): JSX.Element {
 			<NavBar />
 			<Outlet />
 			<footer className={styles.footerStyle}>
-				EmptyFooter By Wladimir Weizen
+				<p>
+					<b>Germany, Cologne</b> © Wladimir Weizen, 2023
+				</p>
+				<p>
+					<b>Follow me:</b>
+					<a className={styles.link} target="_blank" href="https://github.com/weizen-w">
+						<span>My profil</span>
+						<img src="../../../github.png" alt="github" />
+					</a>
+					<a
+						className={styles.link}
+						target="_blank"
+						href="https://github.com/weizen-w/gamesRTK.git"
+					>
+						<span>Repositories</span>
+						<img src="../../../github.png" alt="github" />
+					</a>
+				</p>
 			</footer>
 		</>
 	);

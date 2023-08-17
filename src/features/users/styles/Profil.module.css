@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap');
 
 .pageStyle {
-	font-family: 'Big Shoulders Stencil Text', cursive;
-	font-size: 20px;
+	font-family: 'Amaranth', sans-serif;
+	font-size: 15px;
 	min-height: calc(100vh - 240px);
 	display: flex;
 }
@@ -56,7 +57,7 @@
 
 /* right info box */
 .rightBox {
-  min-width: 100%;
+	min-width: 100%;
 	padding: 10px;
 }
 
@@ -98,7 +99,7 @@
 }
 
 .keyDaten {
-	display:inline-table;
+	display: inline-table;
 	min-width: 150px;
 }
 
@@ -107,9 +108,14 @@
 }
 
 h2 {
-  padding: 5px;
+	padding: 5px;
 	min-width: 100%;
-  background: linear-gradient(144deg, rgb(185, 185, 185) 0%, rgba(95,95,95,1) 42%, rgba(95,95,95,1) 100%);
+	background: linear-gradient(
+		144deg,
+		rgb(185, 185, 185) 0%,
+		rgba(95, 95, 95, 1) 42%,
+		rgba(95, 95, 95, 1) 100%
+	);
 	font-weight: bolder;
 }
 

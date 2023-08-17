@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import styles from '../styles/GameInfo.module.css';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { selectGame } from '../selectors';
 import { loadGameById } from '../gamesSlice';
-import styles from '../styles/GameInfo.module.css';
 
 export default function GameInfo(): JSX.Element {
 	const { gameId } = useParams();
@@ -28,21 +28,20 @@ export default function GameInfo(): JSX.Element {
 	useEffect(() => {
 		dispatch(loadGameById(gameIdNumber));
 	}, [dispatch, gameId]);
+
 	return (
 		<div className={styles.page}>
 			<Link to=".." className={styles.btnBack}>
-				<p className={styles.btnLinkBack} >
-				<ArrowBackIcon />
-				Back
+				<p className={styles.btnLinkBack}>
+					<ArrowBackIcon />
+					Back
 				</p>
 			</Link>
 			<div className={styles.leftBox}>
 				<img className={styles.img} src={game.thumbnail} alt={game.title} />
 				<p className={styles.platform_genre_box}>
 					<span className={styles.genre}>{game.genre}</span>
-					<span className={styles.platform}>
-						{game.platform}
-					</span>
+					<span className={styles.platform}>{game.platform}</span>
 				</p>
 				<div className={styles.infoBox}>
 					<h3 className={styles.infoTitle}>Information</h3>
@@ -106,9 +105,9 @@ export default function GameInfo(): JSX.Element {
 					/>
 					Freetogame profile
 				</a>
-				<h2>Description</h2>
+				<h3>Description</h3>
 				<p className={styles.description}>{game.description}</p>
-				<h2>Screenshots</h2>
+				<h3>Screenshots</h3>
 				<div className={styles.screenshotsBox}>
 					{game.screenshots.map((img) => (
 						<img

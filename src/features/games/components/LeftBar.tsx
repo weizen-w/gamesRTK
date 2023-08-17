@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import styles from '../styles/LeftBar.module.css';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { selectParams } from '../selectors';
 import { changeParams, initialState } from '../gamesSlice';
@@ -66,8 +66,8 @@ export default function LeftBar(): JSX.Element {
 		const tempArrayTags = tags.split('.');
 		for (var i = 0; i < labelArray.length; i++) {
 			labelArray[i].className === ''
-			 ? labelArray[i].className = styles.inputHover
-			 : labelArray[i].className = `${labelArray[i].className} ${styles.inputHover}`;
+				? (labelArray[i].className = styles.inputHover)
+				: (labelArray[i].className = `${labelArray[i].className} ${styles.inputHover}`);
 		}
 		for (var i = 0; i < tempArrayTags.length; i++) {
 			tagsSet.add(tempArrayTags[i]);
@@ -95,6 +95,7 @@ export default function LeftBar(): JSX.Element {
 			})
 		);
 	}, [dispatch, sortBy, platform, tags, tagsSet]);
+
 	return (
 		<div className={styles.leftBarStyle}>
 			<img className={styles.logoStyle} src="../../../logo-theBest.jpg" alt="the-best" />

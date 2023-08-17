@@ -16,7 +16,6 @@ export async function getGamesByParams(path: string): Promise<Game[]> {
 	);
 	return res.json();
 }
-
 export async function getGameById(id: number): Promise<GameInfo> {
 	const res = await fetch(
 		`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`,
