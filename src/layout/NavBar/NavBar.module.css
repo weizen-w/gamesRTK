@@ -26,6 +26,21 @@
   z-index: 999;
 }
 
+.leftBox {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: auto;
+}
+
+.rightBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+}
+
 .link {
   margin: 1px;
   height: 30px;

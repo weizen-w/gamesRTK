@@ -1,16 +1,38 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
+import { useAppSelector } from '../../app/hooks';
+import { selectAuth } from '../../features/users/selectors';
 
 export default function NavBar(): JSX.Element {
+	const auth = useAppSelector(selectAuth);
 	return (
 		<nav className={styles.container}>
-			<img className={styles.logoStyle} src="../../../logo.jpg" alt="logo" />
-			<NavLink className={styles.link} to="/">
-				Home
-			</NavLink>
-			<NavLink className={styles.link} to="games">
-				Games
-			</NavLink>
+			<div className={styles.leftBox}>
+				<Link className={styles.linkLogoStyle} to="/">
+					<img className={styles.logoStyle} src="../../../logo.jpg" alt="logo" />
+				</Link>
+				<NavLink className={styles.link} to="/">
+					Home
+				</NavLink>
+				<NavLink className={styles.link} to="games">
+					Games
+				</NavLink>
+			</div>
+			<div className={styles.rightBox}>
+				{auth?.username ? (
+					<>
+						<NavLink className={styles.link} to="users">
+							Users
+						</NavLink>
+						<NavLink className={styles.link} to="profil">
+							Profil
+						</NavLink>
+					</>
+				) : ''}
+				<NavLink className={styles.link} to="auth">
+					Sign In
+				</NavLink>
+			</div>
 		</nav>
 	);
 }
