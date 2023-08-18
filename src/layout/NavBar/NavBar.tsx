@@ -1,4 +1,5 @@
 import styles from './NavBar.module.css';
+import logo from '../../../logo.jpg';
 import { Link, NavLink } from 'react-router-dom';
 import { useAppSelector } from '../../app/hooks';
 import { selectAuth } from '../../features/users/selectors';
@@ -10,7 +11,7 @@ export default function NavBar(): JSX.Element {
 		<nav className={styles.container}>
 			<div className={styles.leftBox}>
 				<Link className={styles.linkLogoStyle} to="/">
-					<img className={styles.logoStyle} src="../../../logo.jpg" alt="logo" />
+					<img className={styles.logoStyle} src={logo} alt="logo" />
 				</Link>
 				<NavLink className={styles.link} to="/">
 					Home

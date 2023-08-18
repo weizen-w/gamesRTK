@@ -3,7 +3,7 @@ import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { selectAuth, selectUser } from '../selectors';
-import { edit, initialStateUser, loadUser } from '../usersSlice';
+import { edit, loadUser } from '../usersSlice';
 import User from '../types/User';
 
 export default function Profil(): JSX.Element {
@@ -11,7 +11,7 @@ export default function Profil(): JSX.Element {
 	const user = useAppSelector(selectUser);
 	const [isEdit, setIsEdit] = useState<boolean>(false);
 	const dispatch = useAppDispatch();
-	const [newUser, setNewUser] = useState<User>(initialStateUser);
+	const [newUser, setNewUser] = useState<User>(user);
 
 	function getStyleByNoActive(): void {
 		const currActiveBtnArray = document.getElementsByClassName(
@@ -76,7 +76,6 @@ export default function Profil(): JSX.Element {
 
 	useEffect(() => {
 		dispatch(loadUser(auth.id));
-		setNewUser(user);
 	}, [auth]);
 
 	return (

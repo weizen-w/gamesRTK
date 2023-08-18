@@ -1,7 +1,7 @@
 import styles from '../styles/Auth.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
-import { loadAuth } from '../usersSlice';
+import { loadAuth, loadUser } from '../usersSlice';
 import { selectAuth } from '../selectors';
 
 export default function Auth(): JSX.Element {
@@ -25,6 +25,10 @@ export default function Auth(): JSX.Element {
 		}
 	}
 
+	useEffect(() => {
+		auth.id === 0 ? '' : dispatch(loadUser(auth.id));
+	}, [auth]);
+
 	return (
 		<div className={styles.loginPage}>
 			<div className={styles.form}>
@@ -46,13 +50,7 @@ export default function Auth(): JSX.Element {
 					/>
 					{auth?.message !== '' ? <p className={styles.fa}>{auth.message}</p> : ''}
 					{}
-					<button
-						onClick={() => {
-							dispatch(loadAuth({ username, password }));
-						}}
-					>
-						login
-					</button>
+					<button onClick={() => dispatch(loadAuth({ username, password }))}>login</button>
 					<p className={styles.message}>
 						Not registered? <a onClick={editStyleForm}>Create an account</a>
 					</p>

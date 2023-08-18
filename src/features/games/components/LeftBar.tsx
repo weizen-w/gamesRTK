@@ -1,4 +1,5 @@
 import styles from '../styles/LeftBar.module.css';
+import logoTheBest from '../../../../logo-theBest.jpg'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
@@ -98,7 +99,7 @@ export default function LeftBar(): JSX.Element {
 
 	return (
 		<div className={styles.leftBarStyle}>
-			<img className={styles.logoStyle} src="../../../logo-theBest.jpg" alt="the-best" />
+			<img className={styles.logoStyle} src={logoTheBest} alt="the-best" />
 			<div className={styles.textBoxLeftBox}>
 				<button className={styles.btnClearStyle} type="button" onClick={clearParams}>
 					Clear all params

@@ -1,4 +1,5 @@
 import styles from '../styles/Games.module.css';
+import noResult from '../../../../noResult.jpg';
 import DesktopWindowsOutlinedIcon from '@mui/icons-material/DesktopWindowsOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import BookmarkAddOutlinedIcon from '@mui/icons-material/BookmarkAddOutlined';
@@ -89,7 +90,7 @@ export default function Games(): JSX.Element {
 						))
 					) : (
 						<p>
-							<img className={styles.noResultImg} src="../../../noResult.jpg" alt="noResult" />
+							<img className={styles.noResultImg} src={noResult} alt="noResult" />
 						</p>
 					)}
 				</div>
