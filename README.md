@@ -14,6 +14,7 @@ On the site using React Toolkit, JS, TS, HTML, CSS, API.
 
 - The site uses JS to access remote API games ([link to API games](https://www.freetogame.com/api-doc)) to get descriptions of the games, the resulting data is transferred to HTML.
 - To register and receive users, the site uses API-users ([link to API users](https://dummyjson.com/docs)). After registration, the "Profile" page will be available to receive and change the personal data of the current user
+  // You can use any user's credentials from dummyjson.com/users. Example: username: ***kminchelle***, password: ***0lelplR***
 - Starting file - main.tsx. The project contains GitHub Pages ([link to GitHub Pages](https://weizen-w.github.io/gamesRTK/)).
 
 
