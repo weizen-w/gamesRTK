@@ -28,7 +28,7 @@ export default function Layout(): JSX.Element {
 						href="https://github.com/weizen-w/gamesRTK.git"
 					>
 						<span>Repositories</span>
-						<img src="../../../github.png" alt="github" />
+						<img src={github} alt="github" />
 					</a>
 				</p>
 			</footer>
